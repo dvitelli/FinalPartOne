@@ -82,11 +82,26 @@ int main() {
 	sf::Sprite enemySpriteThree(enemyThree);
 	
 	enemyShipOne.x = rand() % num_horzBox;
-	enemyShipOne.y = (rand() % num_vertBox) + 3;
+	enemyShipOne.y = (rand() % num_vertBox) - 3;
+	if (enemyShipOne.y < 0) {
+
+		enemyShipOne.y = 0;
+
+	}
 	enemyShipTwo.x = rand() % num_horzBox;
-	enemyShipTwo.y = (rand() % num_vertBox) + 3;
+	enemyShipTwo.y = (rand() % num_vertBox) - 3;
+	if (enemyShipTwo.y < 0) {
+
+		enemyShipTwo.y = 0;
+
+	}
 	enemyShipThree.x = rand() % num_horzBox;
-	enemyShipThree.y = (rand() % num_vertBox) + 3;
+	enemyShipThree.y = (rand() % num_vertBox) - 3;
+	if (enemyShipThree.y < 0) {
+
+		enemyShipThree.y = 0;
+
+	}
 
 	ship.x = 0;
 	ship.y = 39;
@@ -159,7 +174,12 @@ int main() {
 			if (enemyShipOne.y > 39) {
 
 				enemyShipOne.x = rand() % num_horzBox;
-				enemyShipOne.y = (rand() % num_vertBox) + 3;
+				enemyShipOne.y = (rand() % num_vertBox) - 3;
+				if (enemyShipOne.y < 0) {
+
+					enemyShipOne.y = 0;
+
+				}
 
 				if (delay > .05) {
 
@@ -170,7 +190,12 @@ int main() {
 			} if (enemyShipTwo.y > 39) {
 
 				enemyShipTwo.x = rand() % num_horzBox;
-				enemyShipTwo.y = (rand() % num_vertBox) + 3;
+				enemyShipTwo.y = (rand() % num_vertBox) - 3;
+				if (enemyShipTwo.y < 0) {
+
+					enemyShipTwo.y = 0;
+
+				}
 				if (delay > .05) {
 
 					delay -= .005;
@@ -179,7 +204,12 @@ int main() {
 			} if (enemyShipThree.y > 39) {
 
 				enemyShipThree.x = rand() % num_horzBox;
-				enemyShipThree.y = (rand() % num_vertBox) + 3;
+				enemyShipThree.y = (rand() % num_vertBox) - 3;
+				if (enemyShipThree.y < 0) {
+
+					enemyShipThree.y = 0;
+
+					}
 				if (delay > .05) {
 
 					delay -= .005;
